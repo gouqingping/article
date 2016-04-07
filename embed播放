@@ -1,0 +1,216 @@
+embed 一般用来播放多媒
+支持WMA、WMV、ASF、MPG、AVI、MOV、MP3、SWF、MIDI、RA
+
+注意：embed并不需要结束标签。
+
+embed播放语法
+
+    一般音乐播放语法
+    
+    ＜embed src="url" width="200" height="80" volume="0" loop="1" autostart="true" /＞
+    
+    
+    一般影片播放语法
+    
+    ＜embed src="url" width="200" height="80" autostart="false" /＞
+
+embed播放问题
+  
+  // embed 设置下面的是再加载完成后执行。
+
+    embed 不自动播放 // 更具个人爱好而定
+    
+      autostart="no" 
+      
+      or
+      
+      autostart="0" 
+      
+      or
+      
+      autostart="false"
+    
+    embed 自动播放  // 更具个人爱好而定
+    
+      autostart="yes" 
+      or
+      
+      autostart="1"
+      
+      or
+      
+      autostart="true"
+
+
+
+embed其他各种参数
+
+    播放器显示 // 更具个人爱好而定
+    
+               hidden="false"
+               
+               or
+               
+               hidden="yes"
+               
+               or
+               
+               hidden="1"
+               
+    播放器隐藏 // 更具个人爱好而定
+               
+               hidden="true"
+               
+               or
+               
+               hidden="no"
+               
+               or
+               
+               hidden="0"
+               
+
+  循环播放   // 更具个人爱好而定
+  
+               loop="1"
+               
+               or
+               
+               loop="false"
+               
+               or
+               
+               loop="yes"
+  
+  不循环播放 // 更具个人爱好而定
+               
+               loop="0"
+               
+               or
+               
+               loop="true"
+               
+               or
+               
+               loop="no"
+
+    播放进度显示   // 更具个人爱好而定
+  
+               Tracker="1"
+               
+               or
+               
+               Tracker="false"
+               
+               or
+               
+               Tracker="yes"
+  
+  播放进度不显示 // 更具个人爱好而定
+               
+               Tracker="0"
+               
+               or
+               
+               Tracker="true"
+               
+               or
+               
+               Tracker="no"
+
+    显示段落功能键   // 更具个人爱好而定
+  
+               position Controls="1"
+               
+               or
+               
+               position Controls="false"
+               
+               or
+               
+               position Controls="yes"
+  
+  不显示段落功能键 // 更具个人爱好而定
+               
+               position Controls="0"
+               
+               or
+               
+               position Controls="true"
+               
+               or
+               
+               position Controls="no"    
+
+  显示音量控制键   // 更具个人爱好而定
+  
+               Audio Controls="1"
+               
+               or
+               
+               Audio Controls="false"
+               
+               or
+               
+               Audio Controls="yes"
+  
+  不显示音量控制键 // 更具个人爱好而定
+               
+               Audio Controls="0"
+               
+               or
+               
+               Audio Controls="true"
+               
+               or
+               
+               Audio Controls="no"       
+
+  预设音量大小   // 更具个人爱好而定
+  
+               volume="0-100"
+               Volume="0" //最大音量
+  
+  显示影音资讯视窗   // 更具个人爱好而定
+  
+               ShowDisplay="1"
+               
+               or
+               
+               ShowDisplay="false"
+               
+               or
+               
+               ShowDisplay="yes"
+  
+  不显示影音资讯视窗 // 更具个人爱好而定
+               
+               ShowDisplay="0"
+               
+               or
+               
+               ShowDisplay="true"
+               
+               or
+               
+               ShowDisplay="no" 
+
+  播放器的宽度   // 更具个人爱好而定
+  
+               width="200"
+
+               //可自行更改适合宽度 280-300为完全显示，设定成１或０则为最小。
+
+  播放器的高度   // 更具个人爱好而定
+  
+               hight="80"
+
+               //播放器高度0 - 50，可自行更改适合高度 50为完全显示，设定成１或０则为最小。
+
+  播放的次数   // 更具个人爱好而定
+
+               playCount="2"
+
+               playCount="0"
+
+               //一直重播
