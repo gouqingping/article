@@ -1,0 +1,43 @@
+/* 打印样式 */
+@media print {
+color: red;
+}
+
+/* 手机等小屏幕手持设备 */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    body {
+        **：**
+    }
+}
+
+/* 平板之类的宽度 1024 以下设备 */
+@media only screen and (min-width: 321px) and (max-width: 1024px) {
+    body {
+        **: **;
+    }
+}
+
+/* PC客户端或大屏幕设备: 1028px 至更大 */
+@media only screen and (min-width: 1029px) {
+    body {
+        **: **;
+    }
+}
+
+/* 竖屏 */
+@media screen and (orientation:portrait) and (max-width: 720px) {
+    body {
+        **: **;
+    }
+}
+
+/* 横屏 */
+@media screen and (orientation:landscape){
+    body {
+        **: **;
+    }
+}
+
+@media screen 是根据当前窗口大小来判定的，所以在用到 @media screen 的时候，我建议用到 meta 去配合使用，
+https://github.com/gouqingping/article/blob/master/%E4%BD%BF%E7%94%A8%E8%A7%86meta%E6%A0%87%E7%AD%BE%E6%9D%A5%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B8%83%E5%B1%80.txt
+这样的话可以保证你的页面在不同分辨下可以有相同字体大小显示，完美解决你页面美观问题。
