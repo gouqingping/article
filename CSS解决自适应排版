@@ -1,0 +1,67 @@
+最近总是有很多人问我如何自适应各种，屏幕，其实javascript可以解决，CSS也可以解决。
+但是我个人还是非常喜欢用CSS去适应它们，怎么说呢，我就是一个能用CSS解决问题的就优先使用CSS。
+不是我对javascript有偏见，而是javascript在一个页面太多对承载浏览器负荷有部分影响。当然你后台数据传输时，也会产生一定的负荷，因此我个人
+喜欢用CSS解决问题，实在没办法了，才会用javascript去解决。
+咳咳，有点偏离了，废话我就不多说了，下面我给你们列出各个分辨下的显示如何用CSS去判断。
+
+
+@media print {
+    body {
+         **：**
+    }
+}
+
+@media print 我个人觉得意义并不是很大，应为你下面的那些都写了，这里的基本上都不会起作用。
+不过你们可以在这里写公共样式。
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    body {
+        **：**
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) 就是判断当前屏幕宽最小值是否是 320px，最大值480px这区间的大小;
+
+
+@media only screen and (min-width: 321px) and (max-width: 1024px) {
+    body {
+        **: **;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 1024px) 就是判断当前屏幕宽最小值是否是 321px，最大值1024px这区间的大小;
+
+
+@media only screen and (min-width: 1029px) {
+    body {
+        **: **;
+    }
+}
+
+@media only screen and (min-width: 1029px)就是判断当前屏幕宽1029px以上大小;当然这就是PC端的大小了。还有的平板也会用到这里。
+
+
+@media screen and (orientation:portrait) and (max-width: 720px) {
+    body {
+        **: **;
+    }
+}
+
+@media screen and (orientation:portrait) and (max-width: 720px) 就是判断竖屏，作为程序员你的应该接触过竖屏，
+可以说这里就是专门为那些挑剔的程序员而准备的。还有的平板也会用到这里。
+
+
+@media screen and (orientation:landscape){
+    body {
+        **: **;
+    }
+}
+
+@media screen and (orientation:landscape) 就是判断横屏，平板会用，还有那种超宽屏比如20：9的那种。
+其实我觉得这种玩家也是程序员,或者就是炒股玩家，目测这种玩家比较有钱，所以还是在这种下面做好点才能抓住他们的心。
+
+
+另外注意：
+@media screen 是根据当前窗口大小来判定的，所以在用到 @media screen 的时候，我建议用到 meta 去配合使用，
+https://github.com/gouqingping/article/blob/master/%E4%BD%BF%E7%94%A8%E8%A7%86meta%E6%A0%87%E7%AD%BE%E6%9D%A5%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B8%83%E5%B1%80.txt
+这样的话可以保证你的页面在不同分辨下可以有相同字体大小显示，完美解决你页面美观问题。
