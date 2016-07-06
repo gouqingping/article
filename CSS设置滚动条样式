@@ -9,8 +9,6 @@
 ::-webkit-scrollbar-corner 边角
 ::-webkit-resizer 定义右下角拖动块的样式
 
-如图所示：
-
 
 上面是滚动条的主要几个设置属性，还有更详尽的CSS属性
 
