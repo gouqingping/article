@@ -1,0 +1,96 @@
+没有图片，来不及解释了。
+VueJS
+           Vue.js 不支持 IE8 及其以下版本，因为 Vue.js 使用了 IE8 不能实现的 ECMAScript 5 特性。 
+           Vue.js 支持所有兼容 ECMAScript 5 的浏览器。
+VueJS 独立版本（下载调用）
+	直接下载并用 <script> 标签引入，Vue 会被注册为一个全局变量。
+	重要提示：在开发时请用开发版本，遇到常见错误它会给出友好的警告。
+	https://vuejs.org.cn/js/vue.js  开发版（包含完整的警告和调试模式）
+	https://vuejs.org.cn/js/vue.min.js 稳定版（删除了警告，26.04kb min+gzip）
+VueJS CDN
+	可以从 jsdelivr 或 cdnjs 获取（版本更新可能略滞后）。
+	也可以使用 npmcdn，这个链接指向发布到 npm 上的最新稳定版本。 可以在npmcdn.com/vue/ 上查看包的源码。
+VueJS CSP兼容版
+	有些环境，如 Google Chrome Apps，强制应用内容安全策略 (CSP) ，不能使用new Function() 对表达式求值。
+	这时可以用 CSP 兼容版本。
+以上的版本我都没有安装过，我使用的是NPM安装。给大家讲讲我在 windows8.1 Pro 下安装 VueJS的步骤：
+环境：Windows8.1 Pro
+工具：Git Bush Here
+在VueJS的中文官网（vuejs.org.cn）给出的文档中提到：
+	在 Vue.js 构建大型应用时推荐使用 NPM 安装，NPM 能很好地和诸如 Webpack 或Browserify 的 CommonJS 模块打包器配合使用。
+	Vue.js 也提供配套工具来开发单文件组件。
+但是我感觉这句话就是多余的，怎么说呢，一般我们前端程序员，在用到NodeJS、Gulp……这些工具的时候大多都是使用Cmd命令来操作，所以我相信大多部分中高级程序员都会选择Cmd安装步骤，毕竟，为了装逼嘛。哈哈，闲话就不多说了，下面开始讲解我的Bush 安装步骤。
+1.打开你的 CMD 或者 NPM.cmd 或者Git Bush Here
+先按照官网给出的步骤输入
+
+# 最新稳定版本
+$ npm install vue 
+# 最新稳定 CSP 兼容版本
+$ npm install vue@csp
+
+然后你就能看到
+
+那就说明你已经安装成功了，当然你的终端也有可能会出现卡顿的现象，这个就只能说明你电脑里面东西装的太多了，就比如说我，我的电脑里就装很多东西，node 什么的都有，所以在输入 $ npm install vue 的时候就会等很久，毕竟它们工作的时候还是要查查看你的系统里面有没有 VueJS ，当然如果有的话那么他们就只是帮助你更新。
+
+现在输入 $ vue 你的终端就会显示
+
+这就说明的 VueJS 已经安装到你的计算机中了，但是不要高兴的太早了，下面还有几个比较繁琐的事情。
+2.启动带热重载、保存时静态检查
+Vue.js 提供一个官方命令行工具，可用于快速搭建大型单页应用。该工具提供开箱即用的构建工具配置，带来现代化的前端开发流程。只需一分钟即可启动带热重载、保存时静态检查以及可用于生产环境的构建配置的项目。
+首先我们先来全局安装 Vue-cli，在你的终端执行完上面的 $ npm install vue 后输入：
+# 全局安装 vue-cli
+$ npm install -g vue-cli
+这是个比较繁琐的步骤，会在你的计算机终端中提取新建很多东西，看起来都是非常繁琐的东西。反正它会先在你的系统盘去调查你的 VueJS 然后再给你新建很多文件夹，当然这些文件夹是根据你的 VueJS 来创建的，而且它的每一个步骤都在终端上面给你一一列出，这里我就不详细说明了，我相信你们埋怨我不给你们将，但是如果你们的需求量大的话，我可以下次抽空给你们讲解，现在真的不适合，因为确实很多，你们看一下就明白了，现在你们可以自己在下面的图片上面查看，或者自己实践的时候仔细浏览。
+
+
+
+
+
+
+
+怎么样，是不是现在已经眼花缭乱了，哈哈，其实你们也可以不用全部仔细看，只需要明白这一步已经执行成功了就好了，哈哈，怎么样这个坑喜欢吗？
+3.创建一个基于 “ webpack ” 模板的新项目
+还是和刚才一样等上面的全部显示后再你的终端输入
+# 创建一个基于 "webpack" 模板的新项目
+$ vue init webpack my-project
+$ cd my-project
+$ npm install
+$ npm run dev
+
+就会得到下面的东西，不要被他的外表而吓到，其实就是别人在询问你，就好比你在买电脑后售货员会问你一些设置问题一样。
+然后你敲回车键就会出现很多问答题一样的东西
+
+ Project name (my-project)  # 项目名称（我的项目）
+ Project name my-project   # 项目名称我的项目
+Project description (A Vue.js project)  # 项目描述一个Vue.js 项目
+Project description A Vue.js project  # 项目说明一个 Vue.js 项目
+Author (Pat <gouqingping@yahoo.com>)   # 作者 （Pat <gouqingping@yahoo.com>）
+Use ESLint to lint your code? (Y/n)  # 使用 ESLint 到你的代码？ （Y [ yes ] /  N [ no ]）
+Use ESLint to lint your code? Yes  # 使用 ESLint 到你的代码？ 是
+Pick an ESLint preset (Use arrow keys)  # 选择一个预置ESLint（使用箭头键）
+Pick an ESLint preset Standard  # 选择一个预置ESLint标准
+Setup unit tests with Karma + Mocha? (Y/n)  # 设置单元测Karma + Mocha？ （Y/ N）
+Setup unit tests with Karma + Mocha? Yes  # 设置单元测Karma + Mocha？是
+Setup e2e tests with Nightwatch? (Y/n)  # 设置端到端测试，Nightwatch？ （Y/ N）
+Setup e2e tests with Nightwatch? Yes  # 设置端到端测试，Nightwatch？ 是
+当然这些都看你自己的爱好了，我这里是全选了是。
+最后生成 Vue.js 的webpack 项目
+vue-cli · Generated "my-project".  #  VUE-CLI·生成“我的项目”。
+   To get started:  # 开始：
+     cd my-project  # CD我的项目
+     npm install  # NPM安装
+     npm run dev  # NPM运行开发
+   Documentation can be found at https://vuejs-templates.github.io/webpack  #文档可在https://vuejs-templates.github.io/webpack找到
+当你走到这里的时候你也就完成了VurJS 的安装，当然包括 webpack 打包工具；
+但是官网还给出了一个开发版本的 Common.js 的说明，发布到 NPM 上的 CommonJS 包 (vue.common.js) 只在发布新版本时签入 master 分支，所以这些文件在 dev 分支下跟稳定版本是一样的。想使用 GitHub 上最新的源码，需要自己编译：
+     
+      git clone https://github.com/vuejs/vue.git node_modules/vue
+      cd node_modules/vue
+      npm install
+      npm run build
+
+这个我可以光明正大的说我没用过，我也不知道。哈哈。
+当然已经安装好了，你们可以放肆的去装逼了。
+下次更新的时候就是我心情好的时候，哈哈哈哈哈哈哈~~~~~~~
+
+
