@@ -9,7 +9,7 @@ VueJS 独立版本（下载调用）
 	https://vuejs.org.cn/js/vue.min.js 稳定版（删除了警告，26.04kb min+gzip）
 VueJS CDN
 	可以从 jsdelivr 或 cdnjs 获取（版本更新可能略滞后）。
-	也可以使用 npmcdn，这个链接指向发布到 npm 上的最新稳定版本。 可以在npmcdn.com/vue/ 上查看包的源码。
+	也可以使用 unpkg，这个链接指向发布到 npm 上的最新稳定版本。 可以在unpkg.com/vue/ 上查看包的源码。
 VueJS CSP兼容版
 	有些环境，如 Google Chrome Apps，强制应用内容安全策略 (CSP) ，不能使用new Function() 对表达式求值。
 	这时可以用 CSP 兼容版本。
